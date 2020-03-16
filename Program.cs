@@ -6,8 +6,8 @@ namespace Program
     class Class
     {
         static string modify;
-        static int branch;
-        static int limit;
+        static long branch;
+        static long limit;
         static void Main(string[] args)
         {
             Console.WriteLine("Czas teraz to " + DateTime.Now);
@@ -15,7 +15,7 @@ namespace Program
             do
             {
                 Console.WriteLine("//Mozliwe odpowiedzi: 2, 3");
-                branch = Convert.ToInt32(Console.ReadLine());
+                branch = Convert.ToInt64(Console.ReadLine());
                 if(branch == 2)
                 {
                     Fibonacci();
@@ -32,7 +32,7 @@ namespace Program
         }
         static bool Fibonacci()
         {
-            List<int> ciag = new List<int>();
+            List<long> ciag = new List<long>();
             Console.WriteLine("Czy zmodyfikować pierwsze dwie liczby?\n(Eksperymentalne)");
             do
             {
@@ -41,9 +41,9 @@ namespace Program
                 if(modify == "Tak")
                 {
                     Console.WriteLine("Czym zastapic pierwsza liczbe?");
-                    ciag.Add(Convert.ToInt32(Console.ReadLine()));
+                    ciag.Add(Convert.ToInt64(Console.ReadLine()));
                     Console.WriteLine("Czym zastapic druga liczbe?");
-                    ciag.Add(Convert.ToInt32(Console.ReadLine()));
+                    ciag.Add(Convert.ToInt64(Console.ReadLine()));
                     continue;
                 }
                 else if(modify == "Nie")
@@ -58,7 +58,7 @@ namespace Program
                 }
             } while (ciag.Count != 2);
             Console.WriteLine("Do ktorej liczby wyliczac ciag?");
-            limit = Convert.ToInt32(Console.ReadLine());
+            limit = Convert.ToInt64(Console.ReadLine());
             /*for(i = 0; i <= limit; i++)
             {
                 Console.Write($"{i+1} - {ciag[i]}");
@@ -68,7 +68,7 @@ namespace Program
                 }
             }*/
             int i = 0;
-            for(i = 0; i <= limit; i++)
+            for(i = 2; i <= limit; i++)
             {
                 ciag.Add(ciag[i-1] + ciag[i-2]);
             }
