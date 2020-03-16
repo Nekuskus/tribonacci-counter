@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Damian\\Hakier\\Csharp\\ciągFibonacciego\\ciągFibonacciego\\ciągFibonacciego.csproj",
+      "projectUniqueName": "D:\\Damian\\Hakier\\Csharp\\ciągFibonacciego\\ciągFibonacciego.csproj",
       "projectName": "ciągFibonacciego",
-      "projectPath": "D:\\Damian\\Hakier\\Csharp\\ciągFibonacciego\\ciągFibonacciego\\ciągFibonacciego.csproj",
+      "projectPath": "D:\\Damian\\Hakier\\Csharp\\ciągFibonacciego\\ciągFibonacciego.csproj",
       "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
-      "outputPath": "D:\\Damian\\Hakier\\Csharp\\ciągFibonacciego\\ciągFibonacciego\\obj\\",
+      "outputPath": "D:\\Damian\\Hakier\\Csharp\\ciągFibonacciego\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
