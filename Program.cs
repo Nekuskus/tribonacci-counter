@@ -40,21 +40,23 @@ namespace Program
                 modify = Console.ReadLine();
                 if(modify == "Tak")
                 {
-                    //tekst
-                    ciag[0]= Convert.ToInt32(Console.ReadLine());
-                    //tekst
-                    ciag[1] = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Czym zastapic pierwsza liczbe?");
+                    ciag.Add(Convert.ToInt32(Console.ReadLine()));
+                    Console.WriteLine("Czym zastapic druga liczbe?");
+                    ciag.Add(Convert.ToInt32(Console.ReadLine()));
+                    continue;
                 }
                 else if(modify == "Nie")
                 {
-                    ciag[0] = 0;
-                    ciag[1] = 1;
+                    ciag.Add(0);
+                    ciag.Add(1);
+                    continue;
                 }
                 else
                 {
                     Console.WriteLine($"Niepoprawna odpowiedz: {modify}");
                 }
-            } while ((modify != "Nie") || (modify != "Tak"));
+            } while (ciag.Count != 2);
             Console.WriteLine("Do ktorej liczby wyliczac ciag?");
             limit = Convert.ToInt32(Console.ReadLine());
             /*for(i = 0; i <= limit; i++)
@@ -65,14 +67,10 @@ namespace Program
                     ciag.Add(ciag[i-1] + ciag[i-2]);
                 }
             }*/
-            
-            foreach(var item in ciag)
+            int i = 0;
+            for(i = 0; i <= limit; i++)
             {
-                Console.Write($"{ciag[ciag.IndexOf(item)]} - {item}");
-                if(ciag.IndexOf(item)>1)
-                {
-                    ciag.Add(ciag[ciag.IndexOf(item)-1] + ciag[ciag.IndexOf(item)-2]);
-                }
+                ciag.Add(ciag[i-1] + ciag[i-2]);
             }
             foreach(var item in ciag)
             {
