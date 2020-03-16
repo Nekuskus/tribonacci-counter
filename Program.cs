@@ -76,7 +76,7 @@ namespace Program
             }
             foreach(var item in ciag)
             {
-                Console.WriteLine($"{item}");
+                Console.WriteLine($"{ciag.IndexOf(item)} - {item}");
             }
             return true;
         }
