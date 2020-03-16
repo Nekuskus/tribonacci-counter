@@ -57,7 +57,6 @@ namespace Program
             } while ((modify != "Nie") || (modify != "Tak"));
             Console.WriteLine("Do ktorej liczby wyliczac ciag?");
             limit = Convert.ToInt32(Console.ReadLine());
-            int i;
             /*for(i = 0; i <= limit; i++)
             {
                 Console.Write($"{i+1} - {ciag[i]}");
@@ -66,13 +65,13 @@ namespace Program
                     ciag.Add(ciag[i-1] + ciag[i-2]);
                 }
             }*/
+            
             foreach(var item in ciag)
             {
-                i++;
-                Console.Write($"{ciag[i]} - {item}");
-                if(i>1)
+                Console.Write($"{ciag[ciag.IndexOf(item)]} - {item}");
+                if(ciag.IndexOf(item)>1)
                 {
-                    ciag.Add(ciag[i-1] + ciag[i-2]);
+                    ciag.Add(ciag[ciag.IndexOf(item)-1] + ciag[ciag.IndexOf(item)-2]);
                 }
             }
             foreach(var item in ciag)
